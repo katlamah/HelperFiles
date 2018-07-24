@@ -1,0 +1,83 @@
+Git config --global --list
+Git config --global user.name "mahesh katla"
+git config --global core.editor vim //specifies the editor
+git config --global help.autocorrect 1 //auto correct gives the command suggestions if entered wrong
+git status //gives the current status of the git
+git config --global core.autocrlf  true|false|input
+//ture character to turn line feeds into line feeds in both ways commit and pull only one text files
+//false character to turn line feeds into line only commit/ does not suit for mutiplatform
+//input
+Git config --global
+//character to line 
+Git config --global 
+Git config //for local
+Git diff Head~1..
+Git add -u
+Git add fileName
+Git commit
+Git commit -m "comments"
+touch file1.txt file2.txt //creates the files 
+vim file1.txt //for editing the file
+git add -A //deletions to staging area as well as new files works in case of rename
+git checkout Radme.tx //to rollback the local changes to head repository
+git reset --hard //to rest the repo all the local changes will be lost
+git reset --soft Head~1
+git clean -f//cleans the working copy removes unstated files
+git clean -n //what should u do
+
+//cloning a remote repository
+git clone https://github.com/jquery/jquery.git
+git log --oneline
+git log --oneline |wc -1 number of commits count 
+git log --oneline --graph //graphical representaion of git
+git shotlog //auothers and messages
+git shortlog -sne  //uses , their no of commits and their email address
+git show --Head  //shows last commit
+git remote -v  //shows the remote repository
+gir branch 
+git branch -r //remote branch
+git tags //tags stable versionns
+git remote add origin  url //add the remote repository 
+we can have multiple remote repository  , after adding we can fetch the content using 
+git fetch 
+after fetch , to insert the changes into local repo 
+git merge origin/master
+
+//git pull does the job of both fetch and merge , we need to set up the brach upstream in order to perform the upstream
+git pull
+git branch --set-upstream master(local) origin/master(remote)
+merges remote master to local master
+or 
+git pull master origin
+git commit --am ""//add and commit
+git push
+git tag //to mark a stable version poing
+we can sign or provide a message
+git tag -s v1.0_signed
+git tag -v v1.0_signed //to verify the signed tag
+
+//by default git doesnot push tags , you need to provide 
+git push --tags
+
+
+//branches visualization
+git log --graph --online --all --decorate
+git branch name //creates a new branch
+git checkout name //switches to new branch
+git branch -m fix1 bug1234 //rename the branch
+git branch -d //deleting
+git branch -D bug 1234 //force deletion of branches
+git checkout -b feature2 //new branch is created and checked out
+
+//recovering deleted commits
+git reflog
+git branch bug123 sha //commits deleted are valid for 30 days
+
+//stashing changes
+ saving changes  and index state WIP, changes will be moved to stash 
+ git statsh
+ git stash list
+ git stash apply //reapply changes to repo
+ git stash pop
+ git stash drop
+ git stash branch feature2 //creates new branch with stash changes
